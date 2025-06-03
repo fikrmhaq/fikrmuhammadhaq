@@ -7,6 +7,7 @@ import Expertises from './component/sections/expertises'
 import Services from './component/sections/services'
 import Projects from './component/sections/projects'
 import { handleDownload, scrollToSection } from './function'
+import Contact from './component/sections/contact'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
@@ -33,7 +34,7 @@ function App() {
 							<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 							<li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 							<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-							<li class="nav-item"><a href="#contact-section" class="nav-link"><span>CV</span></a></li>
+							<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contacts</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -56,6 +57,7 @@ function App() {
 					</div>
 				</div>
 			</section>
+			<Contact/>
 			<footer class="ftco-footer ftco-section">
 				<div class="container">
 					<div class="row mb-5">
@@ -99,7 +101,7 @@ function App() {
 									<ul>
 										<li><span class="icon icon-map-marker"></span><span class="text">West Bandung Regency, West Java</span></li>
 										<li><a href="#"><span class="icon icon-phone"></span><span class="text">+62-8772-4039-619</span></a></li>
-										<li><a href="#"><span class="icon icon-envelope"></span><span class="text" style={{ marginLeft:'10px' }}> fikrmuhammadhaq@gmail.com</span></a></li>
+										<li><a href="#"><span class="icon icon-envelope"></span><span class="text" style={{ marginLeft: '10px' }}> fikrmuhammadhaq@gmail.com</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -113,7 +115,7 @@ function App() {
 						</div>
 					</div>
 				</div>
-			</footer> 
+			</footer>
 		</>
 	)
 }

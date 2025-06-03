@@ -10,6 +10,7 @@ export default () => {
     const [refed, onEducation] = useObserveSection()
     const [refex, onExperience] = useObserveSection()
     const [refski, onSkill] = useObserveSection()
+    const [refawa, onAward] = useObserveSection()
 
     useEffect(() => {
         const navLinks = navRef.current?.querySelectorAll('a');
@@ -106,6 +107,21 @@ export default () => {
         }
     ]
 
+    const certificates = [
+        {
+            "date": "2020",
+            "title": "Intellectual Property",
+            "position": "Kemenkumham RI",
+            "description": "Awarded an Intellectual Property certificate as one of the inventors of the Atikan Learning Management System, developed  at the Dinas Pendidikan Provinsi Jawa Barat."
+        },
+        {
+            "date": "2023",
+            "title": "Cum Laude Distinction",
+            "position": "Politeknik Elektronika Negeri Surabaya",
+            "description": "Graduated with an Associate’s Degree (Diploma 3) and a GPA of 3.65 on a 4.00 scale. Earned Cum Laude honors in recognition of outstanding academic achievement."
+        }
+    ]
+
     const skillsCircle = [
         { name: 'React', value: 90 },
         { name: 'Flutter', value: 80 },
@@ -132,9 +148,10 @@ export default () => {
                         <nav id="navi" ref={navRef}>
                             <ul>
                                 {/* {JSON.stringify(currentId)} */}
-                                <li><a className={onEducation  ? 'current' : ''} onClick={() => scrollToSection('page-1')}>Education</a></li>
-                                <li><a className={onExperience  ? 'current' : ''} onClick={() => scrollToSection('page-2')}>Experience</a></li>
-                                <li><a className={onSkill  ? 'current' : ''} onClick={() => scrollToSection('page-3')}>Skills</a></li>
+                                <li><a className={onEducation ? 'current' : ''} onClick={() => scrollToSection('page-1')}>Education</a></li>
+                                <li><a className={onExperience ? 'current' : ''} onClick={() => scrollToSection('page-2')}>Experience</a></li>
+                                <li><a className={onSkill ? 'current' : ''} onClick={() => scrollToSection('page-3')}>Skills</a></li>
+                                <li><a className={onAward ? 'current' : ''} onClick={() => scrollToSection('page-4')} >Certificates</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -212,7 +229,7 @@ export default () => {
                                                     <h3>{el.name}</h3>
                                                     <div class="progress">
                                                         <div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
-                                                            aria-valuemin="0" aria-valuemax="100" style={{width:`${el.value}%`}}>
+                                                            aria-valuemin="0" aria-valuemax="100" style={{ width: `${el.value}%` }}>
                                                             <span>{el.value}%</span>
                                                         </div>
                                                     </div>
@@ -221,10 +238,29 @@ export default () => {
                                         )
                                     })
                                 }
-                            
+
                             </div>
                         </div>
-
+                        <div id="page-4" class="page four" ref={refawa}>
+                            <h2 class="heading">Certificates</h2>
+                            {
+                                certificates.map((el, i) => {
+                                    return (
+                                        <Waypoint animateEffect="fadeInUp" classes="resume-wrap d-flex">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="flaticon-ideas"></span>
+                                            </div>
+                                            <div class="text pl-3">
+                                                <span class="date">{el.date}</span>
+                                                <h2>{el.title}</h2>
+                                                <span class="position">{el.position}</span>
+                                                <p>{el.description}</p>
+                                            </div>
+                                        </Waypoint>
+                                    )
+                                })
+                            }
+                        </div>
 
                     </div>
                 </div>
