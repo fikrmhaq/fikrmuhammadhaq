@@ -100,10 +100,18 @@ export default () => {
         },
         {
             "icon": "flaticon-ideas",
-            "date": "2022-2024",
+            "date": "2022-Now",
             "title": "Fullstack Developer",
             "position": "SMKS Al-Mufti",
             "description": "Building web/mobile apps for some of management procedures such as inventory, scheduling, etc."
+        }
+        ,
+        {
+            "icon": "flaticon-ideas",
+            "date": "2025-Now",
+            "title": "Fullstack Developer",
+            "position": "Various Clients",
+            "description": "Delivered multiple client-facing applications as an independent developer, handling end-to-end development across web and mobile platforms. Built portfolio websites and web applications for individual and institutional clients."
         }
     ]
 
